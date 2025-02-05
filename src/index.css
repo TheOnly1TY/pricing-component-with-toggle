@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* COLORS */
+  /* color mode = hsl(hue, saturation, lightness) */
+  --text-color: #6e728e;
+  --price-color: #4a4d60;
+  --button-color: #6d72de;
+  --color-gradient: linear-gradient(90deg #a2a7f0 0%, #696edd 100%);
+  --background-color: #f7f7fe;
+  --white: #ffffff;
+
+  /* FONT SIZE */
+  /* 1rem === 16px && 0.5rem === 8px */
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+body {
+  background: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+  background-position: top -37px right -195px, bottom left;
+  background-repeat: no-repeat;
+  background-color: var(--background-color);
+  margin: 3rem 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header {
+  flex-direction: column;
+}
+
+.header h2 {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.toggle p {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.toggle-box {
+  width: 56px;
+  height: 32px;
+  display: block;
+  background: linear-gradient(to right, #a2a7f0 0%, #696edd 100%);
+  border-radius: 1000px;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle-box .circle {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background-color: var(--white);
+  border-radius: 1000px;
+  margin: 4px;
+  transition: 0.3s;
+}
+.toggle-box:hover {
+  opacity: 0.5;
+}
+
+.pricingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2.5rem;
+}
+
+.card {
+  display: grid;
+  place-content: center;
+  background-color: var(--white);
+  box-shadow: 0px 20px 40px rgba(212, 210, 244, 0.5);
+}
+
+.card h3 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.card h1 span {
+  font-size: 2.5rem;
+}
+
+.card h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.pricing-benefit p {
+  color: var(--text-color);
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: bold;
+  margin: 12px 0;
+}
+
+.pricing-benefit hr {
+  border: none;
+  border-top: 1px solid var(--text-color);
+}
+
+.card button {
+  font-size: 13px;
+  letter-spacing: 1.39px;
+  all: unset;
+  font-weight: 700;
+  width: 18rem;
+  height: 2.75rem;
+  border-radius: 6px;
+  margin-top: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.primaryCard {
+  height: 453px;
+  background-color: var(--white);
+}
+
+.primaryCard h3 {
+  color: var(--text-color);
+}
+
+.primaryCard h1 {
+  color: var(--price-color);
+}
+
+.primaryCard button {
+  color: var(--white);
+  background: linear-gradient(to right, #a2a7f0 0%, #696edd 100%);
+}
+
+.primaryCard button:hover {
+  color: var(--button-color);
+  background: transparent;
+  border: 1.5px solid var(--button-color);
+}
+
+.secondaryCard {
+  height: 500px;
+  background: linear-gradient(to right, #a2a7f0 0%, #696edd 100%);
+  border-radius: 10px;
+}
+
+.secondaryCard h1,
+h3 {
+  color: var(--white);
+}
+
+.secondaryPricingBenefit p {
+  color: var(--white);
+}
+.secondaryPricingBenefit hr {
+  border: none;
+  border-top: 1px solid var(--white);
+}
+
+.secondaryCard button {
+  color: var(--button-color);
+  background: var(--white);
+}
+
+.secondaryCard button:hover {
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  background: transparent;
+}
+
+.basicCard {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.masterCard {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (max-width: 1023px) {
+  .pricingContainer {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .card {
+    width: 327px;
+  }
+
+  .primaryCard {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 340px) {
+  .card {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 21.875rem;
+  }
+}
